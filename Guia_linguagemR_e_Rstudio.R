@@ -18,46 +18,50 @@ Exemplos de Código
 
 Operações Básicas
 
-# Exemplo de operações básicas
 a <- 10
 b <- 5
 soma <- a + b
-print(soma)  # Saída: 15
+print(soma)  Saída: 15
 
-# Vetores e Operações
+Vetores e Operações
+
 vetor <- c(3, 7, 11, 15, 19)
 vetor_dobrado <- vetor * 2
-print(vetor_dobrado)  # Saída:  6 14 22 30 38
+print(vetor_dobrado)  Saída:  6 14 22 30 38
 
 2. Estruturas de Dados Fundamentais
 
 Vetores
 
-# Criando um vetor
+Criando um vetor
 vetor <- c(1, 3, 5, 7, 9)
 
-# Acessando elementos do vetor
-primeiro_elemento <- vetor[1]  # Primeiro elemento
-ultimo_elemento <- vetor[length(vetor)]  # Último elemento
+Acessando elementos do vetor
 
-# Operações com vetores
+primeiro_elemento <- vetor[1]  Primeiro elemento
+ultimo_elemento <- vetor[length(vetor)]  Último elemento
+
+Operações com vetores
+
 soma <- sum(vetor)
 media <- mean(vetor)
 
 Matrizes
 
-# Criando uma matriz
+Criando uma matriz
+
 matriz <- matrix(1:9, nrow = 3, ncol = 3)
 
-# Acessando elementos da matriz
-elemento_2_3 <- matriz[2, 3]  # Linha 2, Coluna 3
+Acessando elementos da matriz
 
+elemento_2_3 <- matriz[2, 3]  # Linha 2, Coluna 3
 
 3. Controle de Fluxo
 
 Estruturas Condicionais
 
-# Exemplo de estrutura condicional
+Exemplo de estrutura condicional
+
 idade <- 20
 
 if (idade >= 18) {
@@ -66,15 +70,15 @@ if (idade >= 18) {
   print("Não pode dirigir")
 }
 
-
 Loops
 
-# Exemplo de loop for
+Exemplo de loop for
 for (i in 1:5) {
   print(i)
 }
 
-# Exemplo de loop while
+Exemplo de loop while
+  
 contador <- 1
 while (contador <= 5) {
   print(contador)
@@ -89,10 +93,12 @@ O pacote dplyr é amplamente utilizado para manipulação eficiente de dados em 
 
 Carregamento de Dados e Filtragem
 
-# Carregando dados de um arquivo CSV
+Carregando dados de um arquivo CSV
+
 dados <- read.csv("dados.csv")
 
-# Filtrando dados com dplyr
+Filtrando dados com dplyr
+
 library(dplyr)
 dados_filtrados <- filter(dados, idade > 30)
 
@@ -104,7 +110,8 @@ Gráficos de Dispersão
 
 library(ggplot2)
 
-# Criando um gráfico de dispersão
+Criando um gráfico de dispersão
+
 dados <- data.frame(x = rnorm(100), y = rnorm(100))
 ggplot(dados, aes(x = x, y = y)) +
   geom_point() +
@@ -119,7 +126,8 @@ Nível Avançado
 
 Modelagem Estatística com lm
 
-# Exemplo de regressão linear simples
+Exemplo de regressão linear simples
+
 dados <- data.frame(x = 1:10, y = 2*(1:10) + rnorm(10))
 modelo <- lm(y ~ x, data = dados)
 summary(modelo)
@@ -133,7 +141,8 @@ Aplicação de Funções em Vetores
 
 library(purrr)
 
-# Aplicando uma função a um vetor
+Aplicando uma função a um vetor
+
 vetor <- 1:10
 resultado <- map_dbl(vetor, ~ .x^2)
 print(resultado)
